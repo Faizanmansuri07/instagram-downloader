@@ -1,48 +1,43 @@
 
 let container = document.querySelector(".output-container");
-const img = document.querySelector("#output-img");
-const button  = document.querySelector("#get");
+const img = document.querySelector(".img");
+const button  = document.querySelector(".download");
+const getBtn  = document.querySelector(".get");
 const note = document.querySelector("#note")
+let icon = document.querySelector("#remove")
 
+async function getData() {	
+		note.textContent =`Wait Few Seconds`;
 
-async function getData() {
-	 
-	const userInput = document.querySelector("#input").value;
+	var userInput = document.querySelector("#input").value;
 	const url = `https://instagram-post-downloader.p.rapidapi.com/?url=${userInput}`;
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'e10c370a4cmsh563320f27130cedp1f821ejsn928c80c68175',
+		'X-RapidAPI-Key': 'd2844c999dmsha05b5cd3b0a6f1ap185666jsnbf8be627a3cf',
 		'X-RapidAPI-Host': 'instagram-post-downloader.p.rapidapi.com'
 	}
 };
 
-userInput.value ="";
+
+
     const response = await fetch(url, options);
 	const result = await response.json();
 	console.log(result);
 		
-	    let a = document.createElement("a");
-		a.innerHTML = "download";
-		a.href = `${result.data[0].download}`;
-		let image = document.createElement('img');
-		image.classList.add("img")
-		image.src=`${result.data[0].thumbnail}`;
-		container.appendChild(image);
-		container.appendChild(a);
-	
-		let second = 10;
-		userInput.disabled = true;
+	 
+	   
+		img.src=`${result.data[0].thumbnail}`;
+		button.href=`${result.data[0].download}`;
+		container.style.display = "flex";
+		
+		button.addEventListener('click',disableimage);
+		
+		
+}
 
-		const interval = setInterval(() => {
-			second --;
-			note.textContent = `Try after ${second} second`
-			if(second === 0) {
-				clearInterval(interval);
-				userInput.disabled = false;
-				note.textContent = "";
-			}
-		}, 1000);
+function disableimage() {
+	container.style.display ="none";
 }
 	
 // navbar
@@ -63,4 +58,11 @@ function showMenu() {
 	   mode ="open";
 	}
 	
+}
+
+
+function clearInput() {
+	let userIn = document.querySelector("#input");
+	userIn.value = '';
+	userIn.placeholder = 'Insert intagram link here..'
 }
