@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+ background: #e9ecef;
+ overflow-x: hidden;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 150px;
+    height: 60px;
+    background: #ffff;
+    
+    color: black;
+}
+.navbar ion-icon{
+    font-size: 24px;
+    display: none;
+}
+.items2{
+    display: none;
+    width: 100%;
+   animation: height 0.3s;
+    height: 0px;
+    text-align: center;
+}
+@keyframes height {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 80px;
+    }
+}
+.items2 li{
+    margin-top: 10px;
+}
+#logo{
+    font-size: 20px;
+}
+.items{
+    display: flex;
+    gap: 40px;
+
+}
+.items li{
+    color: black;
+    font-size: 16px;
+}
+.btn button{
+    background: linear-gradient(315deg, #60a5fa, #2563eb);
+    transition: 0.25s;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.btn button:hover{
+    background: linear-gradient(to top right, #2563eb, #db2777, #dc2626);
+    cursor: pointer;
+}
+.main{
+    margin-top: 20px;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ padding: 130px 150px;
+ background: linear-gradient(to top right, #2563eb, #db2777, #dc2626);
+}
+.main p{
+    color: white;
+}
+.main #main-header{
+    font-size: 32px;
+    line-height: 1.8;
+    font-weight: 600;
+    text-align: center;
+}
+.user-input{
+    margin-top: 50px;
+    width:70%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 3px;
+   padding-right: 10px;
+}
+.user-input input{
+    height: 100%;
+    width: 96%;
+    padding: 0px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 500;
+
+}
+button{
+    transition: 0.25s;
+}
+.user-input button{
+    background: linear-gradient(315deg, #60a5fa, #2563eb);
+   outline: none;
+   border: none;
+   padding: 10px 15px;
+   border-radius: 3px;
+  
+}
+.user-input button:hover{
+    background: linear-gradient(to top right, #2563eb, #db2777, #dc2626);
+    cursor: pointer;
+}
+.user-input ion-icon:hover{
+    background: #1e1e1f;
+    color: white;
+}
+.output-container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.thumb img{
+    width: 100px;
+    height: 100px;
+   
+    
+}
+.img{
+    width: 300px;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#link{
+    display: none;
+}
+
+/* steps */
+
+.steps{
+    margin-top: 25px;
+    padding: 30px 150px;
+   
+
+}
+.steps #step-header{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #710cd5;
+    margin-bottom: 50px;
+}
+.container{
+    width: 100%;
+    margin-top: 30px;
+}
+.container-inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px 30px;
+    margin-top: 50px;
+}
+.image, .about{
+    width: 50%;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image img{
+    width: 90%;
+}
+.about #step-h{
+    font-size: 30px;
+    font-weight: 500;
+}
+.about #step-d{
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 14px;
+}
+
+/* features */
+.features{
+    padding: 30px 150px;
+}
+.feature-main{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.features #features-header{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #710cd5;
+    margin-top: 50px;
+}
+.feature-inner{
+    width: 280px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+   height: 420px;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px 0px  rgba(0,0,0,0.2);
+}
+.feature-inner img{
+    height: 150px;
+   width: 100%;
+}
+.feature-main #feature-t{
+    font-size: 19px;
+    color: #101010;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.feature-main #feature-d{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+.top{
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+@media(max-width  : 769px) {
+    .navbar ion-icon{
+        font-size: 24px;
+        display: block;
+    }
+    .items{
+        display: none;
+    }
+    .navbar button{
+        display: none;
+    }
+    .navbar{
+        padding: 10px 50px;
+    }
+    .main{
+        padding: 130px 50px;
+    }
+    .steps{
+        padding: 30px 50px;
+    }
+    .container-inner:nth-child(odd) {
+        flex-flow: column;
+    }
+    .container-inner:nth-child(even) {
+        flex-flow: column-reverse;
+    }
+    .about, .image{
+        width: 100%;
+    }
+    .about{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .features{
+        padding: 30px 50px;
+    }
+    .feature-inner{
+        height: 440px;
+    }
+}
+@media(max-width : 426px) {
+    .image img{
+        width: 90vw;
+    }
+    .navbar{
+        padding: 10px 20px;
+    }
+    .main{
+        padding: 130px 20px;
+    }
+    .features{
+        padding: 30px 20px;
+    }
+    .steps{
+        padding: 30px 20px;
+    }
+    .about #step-h{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .about #step-d{
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+   .features #features-header{
+        font-size: 30px;
+    }
+    .feature-inner{
+        width: 100%;
+    }
+    .feature-inner img{
+        height: 180px;
+    }
+    .main #discription{
+        font-size: 13px;
+        font-weight: 500;
+        margin-top: 6px;
+    }
+    .user-input{
+        width: 100%;
+    }
+    .main #main-header{
+        margin-top: 5px;
+        line-height: 1.3;
+    }
+    .main #discription{
+        text-align: center;
+    }
+}
+@media(max-width : 380px) {
+    .navbar{
+        padding: 10px 10px;
+    }
+    .main{
+        padding: 130px 10px;
+    }
+    .features{
+        padding: 30px 10px;
+    }
+    .steps{
+        padding: 30px 10px;
+    }
+}
