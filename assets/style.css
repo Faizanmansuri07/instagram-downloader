@@ -21,12 +21,21 @@ body{
     padding: 10px 150px;
     height: 60px;
     background: #ffff;
-    
     color: black;
 }
+.navbar img{
+    width: 40px;
+}
+.log{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .navbar ion-icon{
-    font-size: 24px;
+    font-size: 30px;
     display: none;
+    font-weight: 600;
+
 }
 .items2{
     display: none;
@@ -48,6 +57,7 @@ body{
 }
 #logo{
     font-size: 20px;
+    font-weight: 600
 }
 .items{
     display: flex;
@@ -119,6 +129,12 @@ button{
    border-radius: 3px;
   
 }
+.user-input i{
+    background-color:#dc2626;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
 .user-input button:hover{
     background: linear-gradient(to top right, #2563eb, #db2777, #dc2626);
     cursor: pointer;
@@ -128,16 +144,27 @@ button{
     color: white;
 }
 .output-container{
+  display: none;
     margin-top: 40px;
-    display: flex;
+    width: 100%;
     flex-direction: column;
     gap: 20px;
+    padding-right: 10px;
 }
 .thumb img{
     width: 100px;
     height: 100px;
    
-    
+}
+.output-container button{
+    outline: none;
+    border: none;
+    height: 30px;
+    border-radius: 3px;
+     background: linear-gradient(315deg, #60a5fa, #2563eb);;
+}
+.output-container a{
+    font-size: 18px;
 }
 .img{
     width: 300px;
@@ -251,6 +278,31 @@ button{
     padding: 20px 10px;
     cursor: pointer;
 }
+
+/* footer */
+.footer{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 70px;
+    padding: 30px 150px;
+    margin-top: 50px;
+}
+.download-link, .other-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+footer .log img{
+    width: 70px;
+}
+footer .log{
+    padding: 10px 150px;
+    background-color: #fff;
+}
 @media(max-width  : 769px) {
     .navbar ion-icon{
         font-size: 24px;
@@ -314,7 +366,7 @@ button{
         font-weight: 500;
     }
     .about #step-d{
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 300;
         margin-top: 20px;
     }
@@ -342,6 +394,12 @@ button{
     .main #discription{
         text-align: center;
     }
+    .footer{
+        padding: 30px 20px;
+        display:flex ;
+        flex-flow: column;
+        gap: 20px;
+    }
 }
 @media(max-width : 380px) {
     .navbar{
@@ -355,5 +413,9 @@ button{
     }
     .steps{
         padding: 30px 10px;
+    }
+    .footer{
+        padding: 30px 10px;
+        gap: 10px;
     }
 }
