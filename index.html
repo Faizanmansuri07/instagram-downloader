@@ -8,11 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body id="top">
    
         <div class="navbar">
-                    <p id="logo">FaizInsta</p>
+            <div class="log">
+                <img src="images/download.png" alt="">
+                <p id="logo">SaveInsta</p>
+            </div>
+              
+                 
                     <ul class="items">
                         <a href="#home"><li>Home</li></a>
                         <a href="#steps"><li>How It's Work</li></a>
@@ -37,10 +43,14 @@
 
                             <div class="user-input">
                                  <input type="text" id="input" placeholder="Insert instagram links here" id="input">
+                                 <i class="fa-solid fa-trash-can" id="remove" onclick="clearInput();"></i>
                                   <button onclick="getData();" id="get">Get</button>
                             </div>
                             <div class="output-container">
-                                
+                                <img src="" alt="" class="img">
+                              <button>
+                                <a href="" class="download">Download</a>
+                              </button>
                             </div>
               </section>
         </main>
@@ -52,6 +62,7 @@
                                 <div class="container-inner">
                                         <div class="image">
                                                 <img src="images/copy-url.png" alt="">
+                                               
                                         </div>
                                         <div class="about">
                                             <p id="step-h">copy URL</p>
@@ -127,10 +138,24 @@
 
 
 <footer>
-
-     <div class="top" >
-          <a href="#top">Go To Top</a>
-     </div>
+    <section class="footer">
+        <div class="download-link">
+                <a href="#home">Thread Video Downloader</a>
+                <a href="#home">Carousel Downloader</a>
+                <a href="#home">story Downloader</a>
+                <a href="#home">Reel Downloader</a>
+        </div>
+        <div class="other-links">
+            <a href="#home">IGTV Downloader</a>
+            <a href="#home">Video Downloader</a>
+            <a href="#home">Photo Downloader</a>
+        </div>
+    </section>
+          <div class="log">
+              <img src="images/download.png" alt="">
+              <p id="logo">SaveInsta</p>
+          </div>
+   
 </footer>
 
 
